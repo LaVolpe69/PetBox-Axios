@@ -1,0 +1,127 @@
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<title>PetBox</title>
+</head>
+<body>
+
+	<div class="container"> 
+		 
+		<!-- tirar o .html e colocar o .php -->
+		<form action="cadastrar.php" method="post">
+<div class="content">
+<h3>Preencha os dados abaixo:</h3>
+
+<div class="input-group">
+  <span class="input-group-addon">Nome:</span>
+  <input type="text" name="nome"  id="nome" class="form-control" placeholder="" maxlength="50" required>
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Email:</span>
+  <input type="text" name="cpf" id="cpf" class="form-control" placeholder="" maxlength="20" required>
+</div>
+<div class="input-group">
+  <span class="input-group-addon">Senha:</span>
+  <input type="password" name="senha" id="senha" class="form-control" placeholder="" maxlength="10" required>
+</div>
+<div class="input-group">
+  <span class="input-group-addon">Data de nascimento:</span>
+  <input type="text" name="datanasc" id="datanasc" class="form-control" maxlength="10" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Tipo do Usuário:</span>
+  <select class="form-control" name="tipo" id="tipo">
+  <option value="3" >Tutor</option>
+  <option value="1">Doador</option>
+</select>
+</div>
+
+<br />
+<h4>Endereço:</h4>
+<br />
+<div class="input-group">
+  <span class="input-group-addon">CEP:</span>
+  <input type="text" name="cep" id="cep" class="form-control" maxlength="10" placeholder="">
+</div>
+<div class="input-group">
+  <span class="input-group-addon">Logradouro:</span>
+  <input type="text" name="logradouro" id="logradouro" class="form-control" maxlength="70" placeholder="">
+</div>
+<div class="input-group">
+  <span class="input-group-addon">Bairro:</span>
+  <input type="text" name="bairro" id="bairro" class="form-control" maxlength="50" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Cidade:</span>
+  <input type="text" name="cidade" id="cidade" class="form-control" maxlength="50" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Número:</span>
+  <input type="text" name="numero" id="numero" class="form-control" maxlength="10" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Complemento:</span>
+  <input type="text" name="complemento" id="complemento" class="form-control" maxlength="50" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Telefone Fixo:</span>
+  <input type="text" name="telfixo" id="telfixo" class="form-control" maxlength="15" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Celular:</span>
+  <input type="text" name="celular" id="celular" class="form-control" maxlength="15" placeholder="">
+</div>
+<br />
+
+<p style="text-align:center;">
+<!-- tirar depois o a href -->
+<button class="btn btn-lg btn-primary btn-warning" type="submit">Cadastrar</button>
+</p>
+</form>
+
+	</div>
+
+
+</div>
+
+<!-- Carregamento dos scripts -->
+
+
+
+<script src="libs/js/bootstrap.min.js"></script>
+<script src="libs/js/jquery.min.js"></script>
+<script src="libs/js/jquery.mask.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  
+  //Máscaras
+  
+  $("#datanasc").mask('00/00/0000');
+  $("#cep").mask('00000-000');
+  $("#telfixo").mask('(00) 0000-0000');
+  $("#celular").mask('(00) 0000-0000');
+  //$("#placa").mask('AAA-9999');
+  $("#placa").mask('AAA-9999', {'translation': {
+                                        A: {pattern: /[A-Za-z]/}
+                                      }
+                                });
+  $("#ano").mask('0000/0000');
+});
+</script>
+</body>

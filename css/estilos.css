@@ -1,0 +1,217 @@
+<link rel="stylesheet" href="css/estilos.css">
+.sacola {
+  background: url(C:/Users/bartolo/Desktop/Projeto/img/sacola.png) no-repeat top right;
+}
+
+
+header {
+  position: relative;
+   top: 2px;
+  left: 183px;
+ 
+}
+
+
+.menu-opcoes {
+  position: absolute;
+  bottom: 0;
+  margin: 400px;
+  width: 940px;
+  
+}
+.logotipo {
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
+.menu-opcoes ul {
+  font-size: 15px;
+}
+
+.menu-opcoes a {
+   color: #003366;
+}
+body {
+  color: #333333;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.busca,
+.menu-departamentos {
+  float: left;
+
+}
+
+.menu-departamentos {
+  clear: left;
+}
+.item-menu {
+  text-decoration: none;
+}
+.menu-departamentos {
+  text-transform: uppercase;
+}
+.busca{ 
+margin-left: -68px;
+background-color: #dcdcdc;
+
+}
+
+
+.menu-departamentos {
+  background-color: #dcdcdc;
+  font-weight: bold;
+  text-transform: uppercase;
+    margin-left: 250px;
+}
+
+.busca h2{
+margin-left: 10px;
+
+}
+
+.busca form{
+	margin: 10px;
+	
+}
+
+
+.menu-departamentos h2 {
+  margin: 10px;
+
+}
+
+.menu-departamentos li {
+  background-color: white;
+  margin-bottom: 1px;
+  padding: 5px 10px;
+}
+
+.menu-departamentos a {
+  color: #333333;
+  text-decoration: none;
+}
+.busca input {
+  vertical-align: middle;
+}
+.menu-opcoes ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.sacola {
+  padding-top: 8px;
+}
+.busca input[type=search] {
+  width: 170px;
+}
+.busca, 
+.menu-departamentos {
+  float: left;
+}
+
+.menu-departamentos {
+    clear: left;
+}
+.destaque {
+  margin-top: 10px;
+}
+.menu-departamentos {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.painel {
+margin-top: 120px;
+  margin-left: -211px;
+  padding: 10px;
+  width: 700px;
+}
+
+.novidades {
+  float: left;
+}
+
+
+.painel li {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+
+  margin: 2px;
+  padding-bottom: 10px;
+}
+
+.painel h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.painel a {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.novidades {
+  background-color: #dcdcf5;
+}
+
+
+footer {
+  background-image: url(../img/fundo-rodape.png);
+}
+
+.social li a {
+  /* tamanho da imagem */
+  height: 32px;
+  width: 32px;
+
+  /* image replacement */
+  display: block;
+  text-indent: -9999px;  
+}
+
+.social a[href*="facebook.com"] {
+  background-image: url(../img/facebook.png);
+}
+
+.social a[href*="twitter.com"] {
+  background-image: url(../img/twitter.png);
+}
+
+.social a[href*="plus.google.com"] {
+  background-image: url(../img/googleplus.png);
+ }
+ footer {
+  clear: both;
+}
+footer {
+  padding: 20px;
+  margin: 180px;
+}
+
+footer .container {
+  position: relative;
+  
+}
+
+.social {
+  position: absolute;
+  top: 12px;
+  right: 720px 		;
+}
+.social li {
+  float: left;
+  margin-left: 25px;
+}

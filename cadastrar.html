@@ -1,0 +1,141 @@
+﻿<?php
+//include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
+//protegePagina(); // Chama a função que protege a página
+include_once("db.php");//acesso ao banco
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+//$usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : '';
+//$senha = (isset($_POST['senha'])) ? $_POST['senha'] : '';
+
+
+
+
+
+	$nome=$_POST["nome"];
+	$cpf=$_POST["cpf"];
+	$senha=$_POST["senha"];
+	$tipo=$_POST["tipo"];
+	$datanasc=$_POST["datanasc"];
+	$cep=$_POST["cep"];
+	$logradouro=$_POST["logradouro"];
+	$bairro=$_POST["bairro"];
+	$cidade=$_POST["cidade"];
+	$num=$_POST["numero"];
+	$complemento=$_POST["complemento"];
+	$telfixo=$_POST["telfixo"];
+	$celular=$_POST["celular"];
+	$placa=$_POST["placa"];//nome do animal
+	$modelo=$_POST["modelo"];//Raça do animal
+	$marca=$_POST["marca"];//Idade do animal
+	$ano=$_POST["ano"];// possivel foto
+	
+
+
+
+
+	//inserirUsuario ($nome, $cpf, $senha);
+
+	inserirUsuario($nome, $cpf, $senha, $datanasc, $tipo, $cep, $logradouro, $bairro, $cidade, $num, $complemento, $telfixo, $celular, $placa, $modelo, $marca, $ano, $cpf);
+	
+	//header("Location: main.php?task=cadastrado");
+
+	//header("Location: index.php");
+
+}
+?>
+
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="libs/css/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="libs/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="libs/css/bootstrap-theme.min.css">
+<style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+      .img-responsive{
+      	display: initial !important;
+		max-width: 40% !important;
+		height: auto !important;
+		}
+      }
+
+    </style>
+
+<title>PetBox</title>
+<script type="text/javascript">
+<!--
+function delayer(){
+    window.location = "index.html";
+}
+//-->
+</script>
+</head>
+<body onLoad="setTimeout('delayer()', 3000)">
+
+
+
+
+<div class="login">
+
+
+	<form method="post" action="login.php" role="form" class="form-signin">
+
+	<p style="text-align:center !important; color:#EF9C35;">
+		</p><p style="text-align:center !important;"><img class="img-responsive" src="petbox2.png"></p>
+		<h2 style="text-align:center !important; color:#EF9C35;"><i>PetBox</i></h2>
+	<p></p>
+		<p style="text-align:center !important;">O seu animal mais perto de você!</p><br>
+
+	
+<div class="alert alert-success"><b>Cadastro efetuado com sucesso.</b></div>
+
+
+        
+        <p style="font-size:9px !important;text-align:center;">2014 - Fábrica de Software Axios.>
+
+ 
+ </form>
+
+
+
+
+</div>
+
+</body>
+</html>

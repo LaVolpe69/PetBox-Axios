@@ -1,0 +1,90 @@
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<title>PetBox</title>
+</head>
+<body>
+
+	<div class="container"> 
+		 
+		<!-- tirar o .html e colocar o .php -->
+		<form action="cadastrar_adocao.php" method="post">
+<div class="content">
+<h3>Preencha os dados abaixo:</h3>
+
+<div class="input-group">
+  <span class="input-group-addon">Nome:</span>
+  <input type="text" name="nome"  id="nome" class="form-control" placeholder="" maxlength="50" required>
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">CPF:</span>
+  <input type="text" name="cpf" id="cpf" class="form-control" placeholder="" maxlength="20" required>
+</div>
+
+
+<br />
+<h4>Dados do Animal:</h4>
+<br />
+
+<div class="input-group">
+  <span class="input-group-addon">Nome do Animal:</span>
+  <input type="text" name="nome_animal" id="nome_animal" class="form-control" maxlength="70" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Telefone Fixo:</span>
+  <input type="text" name="telfixo" id="telfixo" class="form-control" maxlength="15" placeholder="">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">Celular:</span>
+  <input type="text" name="celular" id="celular" class="form-control" maxlength="15" placeholder="">
+</div>
+<br />
+
+<p style="text-align:center;">
+<!-- tirar depois o a href -->
+<button class="btn btn-lg btn-primary btn-warning" type="submit">Adotar</button>
+</p>
+</form>
+
+	</div>
+
+
+</div>
+
+<!-- Carregamento dos scripts -->
+
+
+
+<script src="libs/js/bootstrap.min.js"></script>
+<script src="libs/js/jquery.min.js"></script>
+<script src="libs/js/jquery.mask.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  
+  //Máscaras
+  $("#cpf").mask('000.000.000-00', {reverse: true});
+  $("#datanasc").mask('00/00/0000');
+  $("#cep").mask('00000-000');
+  $("#telfixo").mask('(00) 0000-0000');
+  $("#celular").mask('(00) 0000-0000');
+  //$("#placa").mask('AAA-9999');
+  $("#placa").mask('AAA-9999', {'translation': {
+                                        A: {pattern: /[A-Za-z]/}
+                                      }
+                                });
+  $("#ano").mask('0000/0000');
+});
+</script>
+</body>
